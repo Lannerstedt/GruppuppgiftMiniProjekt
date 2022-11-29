@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
     <title>MiniProjekt</title>
 </head>
 <body>
     <h1>Vår hemsidan</h1>
     <div class="content"></div>
-    <h2>Sub Menu</h2>
+    <h2>Sub Menu</h2>   
     <div class="content">
     <p>Lite text här</p>
     </div>
     <div class="images">
-        <img src="https://images.pexels.com/photos/1404826/pexels-photo-1404826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="200" alt="Picture of a dictracted cat" />
-        <img src="https://images.pexels.com/photos/1404825/pexels-photo-1404825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="200" alt="Cat looking at you" />
-        <button type="button">Click</button>
+        <img id="image" src="https://images.pexels.com/photos/1404826/pexels-photo-1404826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="200" alt="Picture of a dictracted cat" />
+        
+        <button id="btn" type="button">Click</button>
     </div>
-   
+    <script>
+        const img = document.getElementById('image');
+        const button = document.getElementById('btn');
+        let toggle = true;
+
+        button.addEventListener('click', function () {
+            toggle = !toggle;
+            if (toggle) {
+                img.src = "https://images.pexels.com/photos/1404826/pexels-photo-1404826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+            } else {
+                img.src = "https://images.pexels.com/photos/1404825/pexels-photo-1404825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+            }
+        });
+    </script>
 </body>
 </html>
