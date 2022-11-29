@@ -18,15 +18,15 @@
         <div class="images">
             <img id="image" src="https://images.pexels.com/photos/1404826/pexels-photo-1404826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="200" alt="Picture of a dictracted cat" />
 
-            <button id="btn" type="button">Peta på katten!</button>
+            <p id="p-tag">Tryck på katten!</p>
         </div>
     </div>
     <script>
         const img = document.getElementById('image');
-        const button = document.getElementById('btn');
+       // const button = document.getElementById('btn');
         let toggle = true;
 
-        button.addEventListener('click', function () {
+        img.addEventListener('click', function () {
             toggle = !toggle;
             if (toggle) {
                 img.src = "https://images.pexels.com/photos/1404826/pexels-photo-1404826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
