@@ -2,3 +2,7 @@ body {
     background-color:dimgrey;
     color: #ffff;
 }
+
+ img{
+     border-radius:4px;
+ }
